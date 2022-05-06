@@ -1,5 +1,4 @@
-#include <SoftwareSerial.h>
-SoftwareSerial ss (7, 8);
+
 /*
   DigitalReadSerial
 
@@ -19,8 +18,8 @@ SoftwareSerial ss (7, 8);
 
 #define bit9600Delay 100
 #define halfBit9600Delay 50
-#define bit4800Delay (192 + 0)
-#define halfBit4800Delay 96
+#define bit4800Delay 192
+#define halfBit4800Delay 966
 
 
 byte SWval;
@@ -42,7 +41,7 @@ void setup() {
   pinMode(outputTtl, OUTPUT);
   pinMode(inputTtl, INPUT);
   pinMode(outputRs232_3v, OUTPUT);
-  ss.begin(9600);
+
 }
 
 void SWprint(int data)
