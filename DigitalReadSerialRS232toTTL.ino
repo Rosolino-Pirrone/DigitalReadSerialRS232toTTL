@@ -90,11 +90,7 @@ int SWread()
 // the loop routine runs over and over again forever:
 void loop() {
   // read the input pin:
-  /*SWval = SWread(); 
-  if (SWval){
-  //SWval = SWread();
-  Serial.write(SWval);
-  }*/
+  
   if (Serial.available()){
     byte c = Serial.read();
     ss.write(c);
