@@ -79,17 +79,14 @@ int SWread()
     //wait for stop bit + extra
     delayMicroseconds(bit4800Delay / 2);
     delayMicroseconds(bit4800Delay / 2);
-    //delayMicroseconds(bit4800Delay);
-    //delayMicroseconds(bit4800Delay);
+    
     return val;
   }
 }
 
 // the loop routine runs over and over again forever:
 void loop() {
-  // read the input pin:
-  //Serial.println("SWval");
-  //SWval = SWread();
+  
   if (digitalRead(inputRs232_3v)) {
     SWval = SWread();
     Serial.write(SWval);
@@ -97,9 +94,8 @@ void loop() {
   if (Serial.available()) {
     byte c = Serial.read();
     SWprint(c);
-    //Serial.write(c);
+    
   }
-  //digitalWrite(outputTtl, !digitalRead(inputRs232_3v));
-  //digitalWrite(outputRs232_3v, !digitalRead(inputTtl));
+  
 
 }
