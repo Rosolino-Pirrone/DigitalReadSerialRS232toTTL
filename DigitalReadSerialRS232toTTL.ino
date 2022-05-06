@@ -91,7 +91,7 @@ int SWread()
 void loop() {
   // read the input pin:
   
-  if (Serial.available()){
+  /*if (Serial.available()){
     byte c = Serial.read();
     ss.write(c);
   }
@@ -99,8 +99,8 @@ void loop() {
   if (ss.available()){
     byte b = ss.read();
     Serial.write(b);
-  }
-  //digitalWrite(outputTtl, !digitalRead(inputRs232_3v));
-  //digitalWrite(outputRs232_3v, !digitalRead(inputTtl));
+  }*/
+  digitalWrite(outputTtl, !digitalRead(inputRs232_3v));
+  digitalWrite(outputRs232_3v, !digitalRead(inputTtl));
  
 }
