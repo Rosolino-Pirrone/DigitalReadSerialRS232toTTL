@@ -22,7 +22,7 @@
 #define halfBit4800Delay 96
 
 
-byte SWval;
+
 
 
 // digital pin 2 has a pushbutton attached to it. Give it a name:
@@ -50,15 +50,6 @@ void setup() {
 void loop() {
   // read the input pin:
   
-  /*if (Serial.available()){
-    byte c = Serial.read();
-    ss.write(c);
-  }
-
-  if (ss.available()){
-    byte b = ss.read();
-    Serial.write(b);
-  }*/
   digitalWrite(outputTtl, !digitalRead(inputRs232_3v));
   digitalWrite(outputRs232_3v, !digitalRead(inputTtl));
  
