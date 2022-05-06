@@ -1,3 +1,5 @@
+#include <SoftwareSerial.h>
+SoftwareSerial ss (11, 12);
 /*
   DigitalReadSerial
 
@@ -40,6 +42,9 @@ void setup() {
   pinMode(outputTtl, OUTPUT);
   pinMode(inputTtl, INPUT);
   pinMode(outputRs232_3v, OUTPUT);
+  ss.begin(9600);
+
+  
 }
 
 void SWprint(int data)
@@ -84,14 +89,20 @@ int SWread()
 
 // the loop routine runs over and over again forever:
 void loop() {
-  // read the input pin: 
-  if (SWval = SWread()){
+  // read the input pin:
+  /*SWval = SWread(); 
+  if (SWval){
   //SWval = SWread();
   Serial.write(SWval);
-  }
+  }*/
   if (Serial.available()){
     byte c = Serial.read();
-    SWprint(c);
+    ss.write(c);
+  }
+
+  if (ss.available()){
+    byte b = ss.read();
+    Serial.write(b);
   }
   //digitalWrite(outputTtl, !digitalRead(inputRs232_3v));
   //digitalWrite(outputRs232_3v, !digitalRead(inputTtl));
