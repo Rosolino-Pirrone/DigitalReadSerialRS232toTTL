@@ -16,10 +16,7 @@
 
 ///////////////////      ATTENZIONE SOLO 5 VOLTS TOLLERANT     //////////////
 
-#define bit9600Delay 100  
-#define halfBit9600Delay 50
-#define bit4800Delay 192
-#define halfBit4800Delay 96
+
 
 
 
@@ -35,7 +32,7 @@ int outputRs232_3v = 3;
 // the setup routine runs once when you press reset:
 void setup() {
   // initialize serial communication at 9600 bits per second:
-  Serial.begin(9600);
+  Serial.begin(4800);
   // make the pushbutton's pin an input:
   pinMode(inputRs232_3v, INPUT);
   pinMode(outputTtl, OUTPUT);
