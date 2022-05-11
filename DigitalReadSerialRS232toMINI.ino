@@ -18,8 +18,8 @@
 
 #define bit9600Delay 100
 #define halfBit9600Delay 50
-#define bit4800Delay 192
-#define halfBit4800Delay 96
+#define bit4800Delay 189
+#define halfBit4800Delay 95
 
 
 byte SWval;
